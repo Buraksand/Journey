@@ -1,10 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Web Journey</title>
-</head>
-<body>
-    <h1>Welcome to my Web Journey</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Web Journey</title>
+        <style>
+            body{
+                background-color: ghostwhite;
+            }
+            table, th, td {
+                padding: 10px;
+                border: 1px solid #000000;
+                border-collapse: collapse;
+                text-align: left;
+            }
+            th {
+                background-color: black;
+                color: white;
+            }
+            tr:nth-child(odd){
+                background-color: #ffffff;
+            }
+            tr:nth-child(even){
+                background-color: #eeeeee;
+            }
+
+        </style>
+    </head>
+    <body>
+    <script>
+        var total = 0;
+        function updateHello(num){
+
+            if (num == 1){
+                total = total + 1;
+            } else {
+                total = total - 1;
+            }
+
+            document.getElementById("jsdemo1").innerHTML = "Hello Count " + total;
+        }
+    </script>
+        <h1 title="journey tooltip" style="font-family: Georgia">Welcome to my Web Journey</h1>
+        <hr>
+        <p>I will work on technologies below:</p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ul>
+        <hr>
+        <form>
+            <p>Username <input type="text" placeholder="Enter your username"></p>
+            <p>Keep me Logged In <input type="checkbox" checked ></p>
+            <p>You are over 18 <input type="radio" name="age" checked ></p>
+            <p>You are under 18 <input type="radio" name="age" ></p>
+            <p>Hometown:
+                <select>
+                    <option>Ankara</option>
+                    <option selected>İstanbul</option>
+                    <option>İzmir</option>
+                </select>
+            </p>
+            <p><input type="submit" value="click me" ></p>
+        </form>
+        <hr>
+        <table>
+            <caption>My favorite stars</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Birth Year</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Jennifer</td>
+                <td>Lawrence</td>
+                <td>1980</td>
+            </tr>
+            <tr>
+                <td>Bradley</td>
+                <td>Cooper</td>
+                <td>1975</td>
+            </tr>
+            <tr>
+                <td>Robert</td>
+                <td>De Niro</td>
+                <td>1943</td>
+            </tr>
+            <tr>
+                <td>Colin</td>
+                <td>Fith</td>
+                <td>1960</td>
+            </tr>
+            </tbody>
+        </table>
+        <hr>
+    <a href="http://www.wikipedia.com"><img src="img/wikipedia.png" width="100"></a>
+    <hr>
+    <h3>Javacript Example 1</h3>
+    <button id="helloUp" onClick="updateHello(1)">Hello Up</button>
+    <button id="helloDown" onclick="updateHello(0)">Hello Down</button>
+    <p id="jsdemo1">Hello Count 0</p>
+    </body>
 </html>
